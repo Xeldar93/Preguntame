@@ -1,84 +1,152 @@
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Estilos Generales del index */
+body, html {
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    background-color: #f4f4f4;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+header h1 {
     text-align: center;
-}
-
-h1 {
-    margin: 0;
+    color: #333;
 }
 
 main {
-    padding: 20px;
     text-align: center;
-    max-width: 600px;
-    width: 100%;
+    padding: 20px;
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Se queda fijo en la pantalla */
+    z-index: 1; /* Se sitúa sobre el resto */
+    left: 0;
+    top: 0;
+    width: 100%; /* Ancho completo */
+    height: 100%; /* Alto completo */
+    overflow: auto; /* Habilita el scroll si es necesario */
+    background-color: rgb(0,0,0); /* Color de fondo */
+    background-color: rgba(0,0,0,0.4); /* Negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% desde la parte superior y centrado horizontalmente */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Podrías ajustar a un ancho específico si lo prefieres */
+    max-width: 600px; /* Un máximo para que no se vea demasiado grande en pantallas grandes */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Sombra para darle profundidad */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #28a745;
-    color: #fff;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    border-radius: 4px;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #45a049;
 }
 
-#game-container {
-    margin-top: 20px;
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Estilos del game */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px;
+    width: 90%;
+    max-width: 600px;
+}
+
+#game-title {
+    color: #333;
+    margin-bottom: 20px;
 }
 
 #question-container {
     margin-bottom: 20px;
 }
 
-#answers button {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
+#question {
+    color: #5a5a5a;
+    font-size: 1.2em;
+}
+
+.answer {
     background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-#answers button:hover {
+.answer:hover {
     background-color: #0056b3;
 }
 
-#score-container,
-#timer-container {
-    margin: 10px 0;
+#score-container, #timer-container {
+    margin-top: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+#score, #timer {
+    color: #333;
+    font-weight: bold;
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
@@ -88,23 +156,23 @@ footer {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
-    background-color: #fff;
-    margin: 15% auto;
+    position: relative;
+    background-color: #fefefe;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 500px;
-    text-align: center;
+    max-width: 450px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .close {
-    color: #aaa;
+    color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -117,6 +185,17 @@ footer {
     cursor: pointer;
 }
 
-#result-modal {
-    display: none;
+#share-button, #restart-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#share-button:hover, #restart-button:hover {
+    background-color: #45a049;
 }
