@@ -1,0 +1,44 @@
+<!-- game.php -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunt@me - Juego</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<main>
+    <h2 id="game-title">Pregunt@me</h2>
+    <div id="game-container">
+         <div id="question-container">
+                <h3 id="question">¿Pregunta?</h3>
+                <div id="answers">
+                    <button class="answer">Respuesta 1</button>
+                    <button class="answer">Respuesta 2</button>
+                    <button class="answer">Respuesta 3</button>
+                    <button class="answer">Respuesta 4</button>
+                </div>
+         </div>
+         <div id="score-container">
+            <h3 id="score">Puntuación: 0</h3>
+         </div>
+         <div id="timer-container">
+            <h3 id="timer">Tiempo: 0</h3>
+         </div>
+    </div>
+</main>
+
+<div id="result-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 id="result-title">Resultado</h2>
+        <p id="result-message"></p>
+        <button id="share-button">Share</button>
+        <button id="restart-button">Jugar de nuevo</button>
+    </div>
+</div>
+
+<script src="assets/js/script.js"></script>
+</body>
+</html>
